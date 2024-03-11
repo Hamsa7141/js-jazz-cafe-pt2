@@ -1,7 +1,11 @@
 // Functional Programming Tasks:
 
 // Task 1: Implement a function that calculates total earnings
+function calculateEarnings(ticketPrices) {
+    const totalEarnings = ticketPrices.reduce((sum, price)=> sum + price, 0);
+    return totalEarnings;
 
+}
     // Calculate the total earnings by summing up ticket prices
 
 // Examples to test in console:
@@ -10,6 +14,11 @@ const totalEarnings = calculateEarnings(ticketPrices);
 console.log("Total Earnings:", totalEarnings);
 
 // Task 2: Implement a function to filter out free events from a list of events
+
+function filterFreeEvents(event) {
+    const paidEvents = event.filter((event)=> event.price > 0);
+    return paidEvents;
+}
 
     // Create an array to store paid events
 
